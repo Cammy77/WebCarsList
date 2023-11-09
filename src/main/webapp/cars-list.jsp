@@ -22,5 +22,6 @@
 			type="submit" value="delete" name="doThisToCar"> <input
 			type="submit" value="add" name="doThisToCar">
 	</form>
+	<a href="index.html">Add new cars.</a>
 </body>
 </html>

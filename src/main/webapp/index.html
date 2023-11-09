@@ -3,9 +3,24 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Add a new car here</title>
+<script type="text/javascript">
+	function validate(){
+		if(document.addForm.brand.value == ""){
+			alert("Enter a Brand!");
+			document.addForm.brand.focus();
+			return false;
+		}if(document.addForm.model.value == ""){
+			alert("Enter a Model!");
+			document.addForm.model.focus();
+			return false;
+		}else{
+			return (true);
+		}
+	}
+</script>
 </head>
 <body>
-	<form action ="addCarServlet" method="post">
+	<form action ="addCarServlet" name="addForm" onsubmit="return(validate());" method="post">
 		Brand: <input type="text" name="brand">
 		Model: <input type="text" name="model">
 		<input type="submit" value="Add Vehicle">

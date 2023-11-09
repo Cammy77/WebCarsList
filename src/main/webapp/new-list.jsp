@@ -1,14 +1,36 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="ISO-8859-1">
 <title>Make a new list</title>
+<script type="text/javascript">
+	function validate(){
+		if(document.newList.listName.value == ""){
+			alert("Enter a Name!");
+			document.newList.listName.focus();
+			return false;
+		}if(document.newList.month.value == ""){
+			alert("Enter a Month!");
+			document.newList.month.focus();
+			return false;
+		}if(document.newList.day.value == ""){
+			alert("Enter a Day!");
+			document.newList.day.focus();
+			return false;
+		}if(document.newList.year.value == ""){
+			alert("Enter a Year!");
+			document.newList.year.focus();
+			return false;
+		}else{
+			return (true);
+		}
+	}
+</script>
 </head>
 <body>
-	<form action="createNewListServlet" method="post">
+	<form action="createNewListServlet" name="newList" onsubmit="return(validate());" method="post">
 		List Region: <input type="text" name="listName"><br /> 
 		date: <input type="text" name="month" placeholder="mm" size="4">
 			  <input type="text" name="day" placeholder="dd" size="4">, 
