@@ -8,19 +8,19 @@
 <script type="text/javascript">
 	function validate(){
 		if(document.newList.listName.value == ""){
-			alert("Enter a Name!");
+			alert("Enter a name!");
 			document.newList.listName.focus();
 			return false;
 		}if(document.newList.month.value == ""){
-			alert("Enter a Month!");
+			alert("Enter a month!");
 			document.newList.month.focus();
 			return false;
 		}if(document.newList.day.value == ""){
-			alert("Enter a Day!");
+			alert("Enter a day!");
 			document.newList.day.focus();
 			return false;
 		}if(document.newList.year.value == ""){
-			alert("Enter a Year!");
+			alert("Enter a year!");
 			document.newList.year.focus();
 			return false;
 		}else{

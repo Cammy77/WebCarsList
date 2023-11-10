@@ -8,11 +8,11 @@
 <script type="text/javascript">
 	function validate(){
 		if(document.editCar.brand.value == ""){
-			alert("Enter a Brand!");
+			alert("Enter a Brand Name!");
 			document.editCar.brand.focus();
 			return false;
 		}if(document.editCar.model.value == ""){
-			alert("Enter a Model!");
+			alert("Enter a Model Name!");
 			document.editCar.model.focus();
 			return false;
 		}else{
